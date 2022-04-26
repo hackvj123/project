@@ -30,7 +30,8 @@ try:
 
 1) Check your IP info
 2) Check other IP info
-3) Exit
+3) Main program
+4) Exit
 """)
             ch=int(input("Enter Your choice: "))
             if ch==1:
@@ -40,6 +41,9 @@ try:
                 main()
                 m3()
             elif ch==3:
+                import cstool
+                cstool.first()
+            elif ch==4:
                 print("Exit................")
                 quit()
             else:

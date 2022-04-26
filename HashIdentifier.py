@@ -27,12 +27,11 @@ run in terminal
 
     python HashIdentifier.py
 
-The above opens the interactive mode where you can repeatedly give hashes. To exit
-from the interactive mode simple write any one of the following commands :-
+The above opens the interactive mode where you can repeatedly give hashes. To go back
+to main program from the interactive mode simple write any one of the following commands :-
                         "quit or q"
                          
-                        Or else if you want to go back to main program use
-                        "back" or "b" """
+                         """
 
 HASHES = (
     ("Blowfish(Eggdrop)", "^\+[a-zA-Z0-9\/\.]{12}$"),
@@ -160,13 +159,11 @@ def start_process():
             # Exit from loop.
             if input_hash in ("quit",  "q"):
                 print("Bye Bye Thank you for using this tool.")
-                break
+                import cstool
+                cstool.first()
 
         if len(input_hash) < 1:
             print("\nPlease enter the hash. No input hash found.")
-        elif input_hash == "back" or "b":
-            import cstool
-            cstool.first()
         else:
             # Do the operation of Identifying the hashes.
             results = identify_hashes(input_hash)

