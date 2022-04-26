@@ -55,7 +55,7 @@ def nmaps():
             print(f"Port {port} is {port_status}")
         except:
             print(f"Cannot scan port {port}.")
-    a=input("If you want to scan another ip press Y or else press N to return to main program")
+    a=input("If you want to scan another ip press 'Y' or else press 'N' to return to main program:")
     if(a.lower()=='y'):
         nmaps()
     elif(a.lower()=='n'):

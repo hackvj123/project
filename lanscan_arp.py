@@ -29,10 +29,10 @@ def lanscan():
 
     arp_result = scapy.arping(ip_add_range_entered)
     A=input("do you want to go to main program(y/n):")
-    if (A == y):
+    if (A.lower() == "y"):
         import cstool
         cstool.first()
-    elif (A == n):
+    elif (A.lower() == "n"):
         lanscan()
     else:
         quit()
