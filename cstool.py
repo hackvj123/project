@@ -5,17 +5,23 @@ Y = '\033[1;33;40m'
 
 def Main(a):
     if(a==1):
-        from passtester import passtester
+        import passtester 
+        passtester.passtester()
     elif(a==2):
-        from HashIdentifier import identify_hashes
+        import HashIdentifier
+        HashIdentifier.main() 
     elif(a==3):
-        from lanscan_arp import lanscan
+        import lanscan_arp 
+        lanscan_arp.lanscan()
     elif(a==4):
-        from nmap_port_scanner import nmaps
+        import nmap_port_scanner 
+        nmap_port_scanner.nmaps()
     elif(a==5):
-        from ipicker import finder
+        import ipicker 
+        ipicker.finder()
     elif(a==6):
-        from wifi_dos3 import wifi_dos
+        import wifi_dos3 
+        wifi_dos3.wifi_dos()
     elif(a==7):
         quit()
     else:
